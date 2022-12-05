@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.buttonGenerate = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,28 +38,20 @@
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(76, 339);
+            this.buttonGenerate.Location = new System.Drawing.Point(12, 117);
             this.buttonGenerate.Name = "buttonGenerate";
             this.buttonGenerate.Size = new System.Drawing.Size(171, 39);
             this.buttonGenerate.TabIndex = 1;
-            this.buttonGenerate.Text = "Generate!";
+            this.buttonGenerate.Text = "SIMULATE";
             this.buttonGenerate.UseVisualStyleBackColor = true;
             this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(49, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sensorer";
             // 
             // numericUpDown1
             // 
@@ -114,7 +105,7 @@
             this.groupBox1.Controls.Add(this.numericUpDown1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Location = new System.Drawing.Point(91, 259);
+            this.groupBox1.Location = new System.Drawing.Point(27, 37);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(144, 74);
             this.groupBox1.TabIndex = 6;
@@ -149,16 +140,17 @@
             "d",
             "a",
             "s"});
-            this.checkedListBox1.Location = new System.Drawing.Point(12, 36);
+            this.checkedListBox1.Location = new System.Drawing.Point(-1, -2);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(306, 199);
+            this.checkedListBox1.Size = new System.Drawing.Size(10, 4);
             this.checkedListBox1.TabIndex = 7;
+            this.checkedListBox1.Visible = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(177, 7);
+            this.button1.Location = new System.Drawing.Point(-1, -2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(58, 23);
+            this.button1.Size = new System.Drawing.Size(10, 10);
             this.button1.TabIndex = 8;
             this.button1.Text = "Select all";
             this.button1.UseVisualStyleBackColor = true;
@@ -166,25 +158,36 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(241, 7);
+            this.button2.Location = new System.Drawing.Point(-1, -2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(72, 23);
+            this.button2.Size = new System.Drawing.Size(10, 10);
             this.button2.TabIndex = 9;
             this.button2.Text = "Deselect all";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(35, 14);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(129, 17);
+            this.checkBox1.TabIndex = 10;
+            this.checkBox1.Text = "Case: Reverse Power";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(331, 384);
+            this.ClientSize = new System.Drawing.Size(188, 167);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGenerate);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -201,7 +204,6 @@
 
         #endregion
         private System.Windows.Forms.Button buttonGenerate;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -210,6 +212,7 @@
         private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }
 
