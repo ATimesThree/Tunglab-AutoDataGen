@@ -280,7 +280,15 @@ namespace AutoDataGenerator
                         double percentage = rnd.Next(0, 26);
                         if (percentage != 0)
                         {
-                            var newMeasurement = msrmnt.Measurement*Double.Parse(("0.0"+percentage));
+                            var newMeasurement = 0.0;
+                            if (percentage >= 10)
+                            {
+                                newMeasurement = msrmnt.Measurement*Double.Parse(("0.0"+percentage));
+                            }
+                            else
+                            {
+                                newMeasurement = msrmnt.Measurement*Double.Parse(("0.00"+percentage));
+                            }
 
                             if (rnd.Next(0,2) == 0)
                             {
